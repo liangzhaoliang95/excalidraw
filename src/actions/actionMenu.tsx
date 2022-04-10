@@ -86,7 +86,7 @@ export const actionShortcuts = register({
     };
   },
   PanelComponent: ({ updateData }) => (
-    <HelpIcon title={t("helpDialog.title")} onClick={updateData} />
+    <div></div>
   ),
   keyTest: (event) => event.key === KEYS.QUESTION_MARK,
 });
