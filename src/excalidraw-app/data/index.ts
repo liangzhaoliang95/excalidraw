@@ -41,16 +41,14 @@ export const getCollabServer = async (): Promise<{
   url: string;
   polling: boolean;
 }> => {
-  if (process.env.REACT_APP_WS_SERVER_URL) {
-    return {
-      url: process.env.REACT_APP_WS_SERVER_URL,
-      polling: true,
-    };
-  }
+  return {
+    url: "https://boardserver.xiaozao520.cn:81",
+    polling: true,
+  };
 
   try {
     const resp = await fetch(
-      `${process.env.REACT_APP_PORTAL_URL}`,
+      `https://boardserver.xiaozao520.cn:81`,
     );
     return await resp.json();
   } catch (error) {
