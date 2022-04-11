@@ -50,7 +50,7 @@ export const getCollabServer = async (): Promise<{
 
   try {
     const resp = await fetch(
-      `${process.env.REACT_APP_PORTAL_URL}/collab-server`,
+      `${process.env.REACT_APP_PORTAL_URL}`,
     );
     return await resp.json();
   } catch (error) {
