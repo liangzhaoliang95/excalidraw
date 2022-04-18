@@ -8,7 +8,7 @@ RUN yarn --ignore-optional
 ARG NODE_ENV=production
 
 COPY . .
-RUN yarn build:app:docker
+RUN yarn build-node
 
 FROM nginx:1.21-alpine
 
